@@ -83,8 +83,8 @@ def main():
     eval_dataloader = create_dataloader(
         dataset_name=args.dataset,
         split="validation",
-        batch_size=cfg.get('batch_size', 16),
-        max_length=cfg.get('max_length', 512)
+        batch_size=cfg.get('batch_size', 8),
+        max_length=cfg.get('max_length', 256)
     )
     
     # Setup optimizer
@@ -132,3 +132,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
